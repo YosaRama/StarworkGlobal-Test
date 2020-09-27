@@ -1,6 +1,6 @@
 import React from "react";
 import NavItems from "../util/NavItems";
-import AddNavItem from "./AddNavItem";
+import AddNavItem from "../view/AddNavItem";
 
 const { NLeft, NRight } = NavItems;
 
