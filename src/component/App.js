@@ -3,6 +3,9 @@ import Navs from "./Navs";
 import HeaderContent from "./HeaderContent";
 import ListContent from "./ListContent";
 import CryptoTable from "./CryptoTable";
+import Detail from "./Detail";
+import Join from "./Join";
+import Footer from "./Footer";
 
 function App() {
   return (
@@ -11,6 +14,9 @@ function App() {
       <HeaderContent />
       <ListContent />
       <CryptoTable />
+      <Detail />
+      <Join />
+      <Footer />
     </div>
   );
 }

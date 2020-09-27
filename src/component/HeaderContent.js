@@ -13,14 +13,14 @@ function HeaderContent() {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <div className="row">
-              <div className="col align-self-start">
+              <div className="col">
                 <h1> The Future Standard of Cryptocurrency Exchange</h1>
                 <p>Lorem ipsum dolor sit amet sebuah kalimat</p>
                 <button className="btn btn-outline-warning">
                   Register Now
                 </button>
               </div>
-              <div className="col align-self-end">
+              <div className="col">
                 <img src={Background} style={{ zIndex: -1 }} alt="" />
               </div>
             </div>

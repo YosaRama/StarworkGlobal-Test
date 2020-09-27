@@ -4,7 +4,13 @@ import AddCryptoTableBody from "../view/CryptoTableBody";
 
 export default function CryptoTable() {
   return (
-    <div className="container-fluid">
+    <div className="container">
+      <div className="row">
+        <h3 className="col">STARX Markets</h3>
+        <h3 className="col">USDT Markets</h3>
+        <h3 className="col">Favorite</h3>
+        <input className="col" type="text" />
+      </div>
       <table className="table">
         <thead className="thead-dark">
           <tr>
