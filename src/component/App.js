@@ -1,7 +1,7 @@
 import React from "react";
 import Navs from "./Navs";
-import HeaderContent from "./Header-Content";
-import ListContent from "./List-Content";
+import HeaderContent from "./HeaderContent";
+import ListContent from "./ListContent";
 
 function App() {
   return (
