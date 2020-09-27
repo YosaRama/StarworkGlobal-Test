@@ -2,6 +2,7 @@ import React from "react";
 import Navs from "./Navs";
 import HeaderContent from "./HeaderContent";
 import ListContent from "./ListContent";
+import CryptoTable from "./CryptoTable";
 
 function App() {
   return (
@@ -9,6 +10,7 @@ function App() {
       <Navs />
       <HeaderContent />
       <ListContent />
+      <CryptoTable />
     </div>
   );
 }
