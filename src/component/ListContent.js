@@ -4,20 +4,22 @@ import CryptoList from "../util/_cryptoList";
 
 export default function ListContent() {
   return (
-    <div className="container">
-      <div className="form-row">
-        {CryptoList.map((item, index) => {
-          return (
-            <AddCryptoList
-              key={index}
-              model={item.model}
-              currency={item.currency}
-              ammount={item.ammount}
-              plus={item.plus}
-            />
-          );
-        })}
+    <section className="listContentSection">
+      <div className="container content">
+        <div className="form-row">
+          {CryptoList.map((item, index) => {
+            return (
+              <AddCryptoList
+                key={index}
+                model={item.model}
+                currency={item.currency}
+                ammount={item.ammount}
+                plus={item.plus}
+              />
+            );
+          })}
+        </div>
       </div>
-    </div>
+    </section>
   );
 }

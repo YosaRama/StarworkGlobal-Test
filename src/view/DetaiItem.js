@@ -2,7 +2,7 @@ import React from "react";
 
 export default function DetailItem(props) {
   return (
-    <div className="col-6">
+    <div className="col-6 content">
       <div className="row">
         <div className="col-3">
           <img className="w-100" src={props.icon} alt="" />
