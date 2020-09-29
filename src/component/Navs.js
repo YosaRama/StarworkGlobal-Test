@@ -20,6 +20,28 @@ function Navs() {
             {NRight.map((item, index) => {
               return <AddNavItem key={index} title={item} />;
             })}
+            <li className="nav-item">
+              <div className="dropdown">
+                <a
+                  className="dropdown-toggle"
+                  role="button"
+                  id="dropdownMenuLink"
+                  data-toggle="dropdown"
+                  href="L"
+                >
+                  Language
+                </a>
+
+                <div className="dropdown-menu">
+                  <a class="dropdown-item" href="L">
+                    Indonesia
+                  </a>
+                  <a class="dropdown-item" href="L">
+                    Germany
+                  </a>
+                </div>
+              </div>
+            </li>
           </ul>
         </div>
       </nav>
