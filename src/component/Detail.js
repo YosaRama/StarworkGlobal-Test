@@ -4,9 +4,9 @@ import AddDetailItem from "../view/DetaiItem";
 
 export default function Detail() {
   return (
-    <section id="detailSection">
+    <section id="detailSection" className="blue-content">
       <div className="container content">
-        <h1 className="content">Why Starmex Exchange?</h1>
+        <h1 className="content title">Why Starmex Exchange?</h1>
         <div className="form-row">
           {detailItem.map((item, index) => {
             return (

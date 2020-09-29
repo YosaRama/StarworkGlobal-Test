@@ -4,7 +4,7 @@ import CryptoList from "../util/_cryptoList";
 
 export default function ListContent() {
   return (
-    <section className="listContentSection">
+    <section id="listContentSection">
       <div className="container content">
         <div className="form-row">
           {CryptoList.map((item, index) => {

@@ -7,6 +7,7 @@ import AddCryptoTableBody from "../view/CryptoTableBody";
 
 export default function CryptoTable() {
   const [TableBody, setTableBody] = useState(CryptoTableBody);
+  const [Search, setSearch] = useState("");
 
   function StarXClick() {
     setTableBody(CryptoTableBody);
@@ -20,35 +21,54 @@ export default function CryptoTable() {
 
   function FavoriteClick() {
     setTableBody(
-      CryptoTableBody.filter((item) => (item.rating === faStar)).map(
+      CryptoTableBody.filter((item) => item.rating === faStar).map(
         (favItem) => favItem
       )
     );
   }
+
+  function onSearch() {
+    setTableBody(
+      TableBody.filter((item) => {
+        return item.pair.toLowerCase().match(Search.toLowerCase());
+      }).map((i) => i)
+    );
+  }
+
   return (
     <section id="cryptoTableSection">
-      <section id="cryptoTableHeader">
+      <section id="cryptoTableHeader" className="blue-content">
         <div className="container">
-          <div className="row content">
-            <h3 className="col" onClick={StarXClick}>
+          <div className="row content title">
+            <h3 className="col table-sort" onClick={StarXClick}>
               STARX Markets
             </h3>
-            <h3 className="col" onClick={UstdClick}>
+            <h3 className="col table-sort" onClick={UstdClick}>
               USDT Markets
             </h3>
-            <h3 className="col" onClick={FavoriteClick}>
+            <h3 className="col table-sort" onClick={FavoriteClick}>
               <FontAwesomeIcon icon={faStar} />
               Favorite
             </h3>
-            <input className="col" type="text" />
+            <input
+              className="col search-box"
+              type="text"
+              placeholder="&#xF002;  Search ..."
+              onChange={(e) => {
+                e.preventDefault();
+                setSearch(e.target.value);
+              }}
+              value={Search}
+              onKeyUp={onSearch}
+            />
           </div>
         </div>
       </section>
       <section id="cryptoTableBody">
-        <div className="container">
+        <div className="container table-responsive">
           <table className="table content">
-            <thead className="thead-dark">
-              <tr>
+            <thead>
+              <tr className="title">
                 {CryptoTableHeader.map((header, index) => {
                   return <th key={index}>{header}</th>;
                 })}
